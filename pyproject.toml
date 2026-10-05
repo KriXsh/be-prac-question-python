@@ -1,0 +1,31 @@
+[project]
+name = "be-prac-question-python"
+version = "0.1.0"
+description = "Python fundamentals lectures + topic-wise DSA practice"
+authors = [{ name = "Krishnendu Ghosal", email = "krishnendughosal999@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = []
+
+[tool.poetry]
+# Practice repo, not a library -- Poetry only manages the env + deps.
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+ruff = "^0.8"
+ipython = "^8.0"
+
+[tool.pytest.ini_options]
+# Each practice file holds the solution AND its test_* functions,
+# so pytest collects every .py file under these folders.
+testpaths = ["lectures", "dsa"]
+python_files = ["*.py"]
+addopts = "-q --import-mode=importlib"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

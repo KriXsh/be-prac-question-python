@@ -1,0 +1,32 @@
+# Virtual environment (created by Poetry inside the project)
+.venv/
+venv/
+env/
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Env / secrets
+.env
+.env.*
+
+# Editors / OS
+.vscode/*
+!.vscode/settings.json
+.idea/
+.DS_Store
+
+# Scratch files you don't want committed
+scratch/
+*.local.py
